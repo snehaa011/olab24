@@ -2,7 +2,7 @@ package oldshelf;
 
 public class OldSelection {
 
-	// TODO: Complete this method.
+	// done: Complete this method.
 	/**
 	 * 
 	 * @param o object
@@ -27,7 +27,7 @@ public class OldSelection {
 
 	public static void main(String[] args) {
 		
-		// TODO: Write a test code here and execute and text.
+		// done: Write a test code here and execute and text.
 		TextBook t = new TextBook("Chemistry");
 		Fiction f = new Fiction("Nancy Drew", FictionType.Comedy);
 		Comic c = new Comic("Suppandi Diaries", 20);

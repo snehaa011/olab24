@@ -3,7 +3,7 @@ package newshelf;
 
 public class NewSelection {
 
-	// TODO: Complete this method 
+	// done: Complete this method 
 	/**
 	 * 
 	 * @param o object
@@ -28,7 +28,7 @@ public class NewSelection {
 
 	public static void main(String[] args) {
 		
-		// TODO: Write a test code here and execute and text.
+		// done: Write a test code here and execute and text.
 		TextBook t = new TextBook("Physics");
 		System.out.println(getAgeOrTitle(t));
 		Comic c = new Comic("Dear Diary", 11);
