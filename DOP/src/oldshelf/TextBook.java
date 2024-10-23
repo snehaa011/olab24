@@ -11,7 +11,7 @@ public class TextBook extends Book {
 	}
 
 	// TODO : create a getter if required.
-	String getsubject(){
+	public String getsubject(){
 		return subject;
 	}
 	
@@ -19,8 +19,23 @@ public class TextBook extends Book {
 	
 	// TODO: write a toString method
 	@Override
-	public String toString() {
+	public final String toString() {
 		return subject;
+	}
+
+	@Override
+	public final int hashCode(){
+		return subject.length();
+	}
+
+	@Override
+	public final boolean equals(Object o){
+		if (o instanceof TextBook t){
+			if (t.hashCode() == this.hashCode()){
+				return true;
+			}
+		}
+		return false;
 	}
 
 }
