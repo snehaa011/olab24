@@ -25,13 +25,21 @@ public class NewSelection {
 		// }
 		// return null;
 
-		return switch(o){
-			case Comic c -> c.title();
-			// case Fiction f when f.name().startsWith("A") -> "Fiction starting with A: "+f.name();
-			case Fiction f -> f.name();
-			case TextBook t -> t.subject();
-			default -> "";
-		};
+		// return switch(o){
+		// 	case Comic c -> c.title();
+		// 	// case Fiction f when f.name().startsWith("A") -> "Fiction starting with A: "+f.name();
+		// 	case Fiction f -> f.name();
+		// 	case TextBook t -> t.subject();
+		// 	default -> "";
+		// };
+
+		switch (o){
+			case Comic(String title, int ageOfMainCharacter): return title;
+			case Fiction(String name, FictionType type) when type==FictionType.Comedy: return "Comedy "+name;
+			case Fiction(String name, FictionType type): return name;
+			case TextBook(String subject): return subject;
+			default: return "";
+		}
 	}
 
 	public static void main(String[] args) {
