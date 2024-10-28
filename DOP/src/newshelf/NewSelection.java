@@ -12,18 +12,26 @@ public class NewSelection {
 	 */
 	public static String getAgeOrTitle(Object o) {
 		
-		if (o instanceof IBook) {
-			if (o instanceof Comic c){
-				return c.title();
-			}
-			else if (o instanceof Fiction f){
-				return f.name();
-			}
-			else if (o instanceof TextBook t){
-				return t.subject();
-			}
-		}
-		return null;
+		// if (o instanceof IBook) {
+		// 	if (o instanceof Comic c){
+		// 		return c.title();
+		// 	}
+		// 	else if (o instanceof Fiction f){
+		// 		return f.name();
+		// 	}
+		// 	else if (o instanceof TextBook t){
+		// 		return t.subject();
+		// 	}
+		// }
+		// return null;
+
+		return switch(o){
+			case Comic c -> c.title();
+			// case Fiction f when f.name().startsWith("A") -> "Fiction starting with A: "+f.name();
+			case Fiction f -> f.name();
+			case TextBook t -> t.subject();
+			default -> "";
+		};
 	}
 
 	public static void main(String[] args) {
