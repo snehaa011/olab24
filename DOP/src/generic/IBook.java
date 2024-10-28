@@ -2,7 +2,7 @@ package generic;
 
 import newshelf.FictionType;
 
-public interface IBook<T> extends Comparable<T>{
+public sealed interface IBook<T> extends Comparable<T> permits Comic, Fiction, TextBook{
 
 }
 
