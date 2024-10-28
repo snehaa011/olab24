@@ -13,6 +13,6 @@ public class OldSelectionTest {
     @Test
     public void testgetAgeOrTitleForString() {
     	String s = "Hello";
-    	assertNull(OldSelection.getAgeOrTitle(s));
+    	assertEquals("",OldSelection.getAgeOrTitle(s));
     }
 }
