@@ -5,10 +5,14 @@ import org.junit.Test;
 
 public class OldSelectionTest {
     @Test
-    public void testgetAgeOrTitle(){
+    public void testgetAgeOrTitleForComic(){
         Comic ct= new Comic("Tinkle", 10);
-        assertEquals(ct.getTitle(), OldSelection.getAgeOrTitle(ct));
+        assertEquals("Tinkle", OldSelection.getAgeOrTitle(ct));
+    }
+    
+    @Test
+    public void testgetAgeOrTitleForString() {
+    	String s = "Hello";
+    	assertNull(OldSelection.getAgeOrTitle(s));
     }
 }
-
-//TODO: need to figure out how to add .jar files
