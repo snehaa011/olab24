@@ -21,9 +21,10 @@ public class OldSelection {
 		// 	else if (o instanceof TextBook t){
 		// 		return t.getsubject();
 		// 	}
+		// 	return null;
 		// }
 		// else
-		// return "";
+		// 	return "";
 		switch(o){
 			case Comic c: return c.getTitle(); 
 			case Fiction f: return f.getname(); 
